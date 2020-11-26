@@ -18,7 +18,7 @@
     padding-top: 20px;
 }
 .content {
-    width: 880px;
+    max-width: 900px;
     margin: 0 auto;
 }
 .contacts {

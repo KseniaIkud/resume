@@ -5,6 +5,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'NoticiaText';
     src: url('../../fonts/NoticiaText-Bold.eot');
@@ -12,6 +13,7 @@
     font-weight: 700;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'OpenSans';
     src: url('../../fonts/OpenSans-Regular.ttf');
@@ -22,67 +24,97 @@
 
 .homePage {
     margin: 0 auto;
+    padding: 50px 10px;
     background-color: #eae5e5;
     display: grid;
     grid-template-columns: 1fr 1.25fr;
-    width: 940px;
-    height: 500px;
-    padding-left: 35px;
-    padding-top: 50px;
+    max-width: 900px;
+
+}
+@media (max-width: 767px) {
+    .homePage {
+        display: block;
+        height: 100%;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 }
 
 .photo {
-    width: 300px;
+    max-width: 300px;
     height: 300px;
     border-radius: 50%;
 }
+@media (max-width: 767px) {
+    .photo {
+        width: 250px;
+        height: 250px;
+        display: block;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 376px) {
+    .photo {
+        width: 200px;
+        height: 200px;
+    }
+}
+
 .information {
     margin-top: -10px;
 }
-.title {
-    font-size: 80px;
-    font-family: NoticiaText;
-    font-weight: 700;
-    /*color: #4d4d4d;*/
-    color: #eae5e5;
-    margin-bottom: 20px;
-}
-
-.subtitle {
-    font-size: 46px;
-    font-weight: normal;
-}
-
-.link {
+.rounds {
     display: flex;
     justify-content: space-between;
-    height: 130px;
-    width: 435px;
-    line-height: 130px;
+    max-width: 435px;
     font-family: OpenSans;
     font-size: 12px;
     color: #fff;
     text-align: center;
     margin-top: 80px;
+    margin-bottom: 0;
+}
+@media (max-width: 767px) {
+    .rounds {
+        margin: 20px auto;
+    }
+}
+.link {
+    width: 30%;
+    border-radius: 50%;
+    height: 130px;
+    line-height: 130px;
+}
+@media (max-width: 767px) {
+    .link {
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+    }
+}
+@media (max-width: 376px) {
+    .link {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+    }
 }
 
 .resume {
-    width: 130px;
     background-color: #e83556;
-    border-radius: 50%;
 }
 
 .works {
-    width: 130px;
     background-color: #61d0d4;
-    border-radius: 50%;
 }
 
 .contact {
-    width: 130px;
     background-color: #d1c926;
-    border-radius: 50%;
 }
+
 .welcome {
     margin-top: 20px;
+    font-size: 18px;
+    font-family: OpenSans;
 }
+

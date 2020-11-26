@@ -6,18 +6,15 @@
     font-style: normal;
 }
 .header {
-    margin: 0 auto;
-    width: 975px;
-    height: 150px;
+    margin: 10px auto;
+    max-width: 900px;
     background-color: #eae5e5;
 }
 .content {
-    margin: 35px 80px;
-    width: 740px;
     display: flex;
-    justify-content: space-between;
 }
 .name {
+    margin-right: 20px;
     font-family: NoticiaText;
     font-weight: 700;
     font-size: 40px;
