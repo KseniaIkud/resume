@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'NoticiaText';
+    src: url('../../fonts/NoticiaText-Regular.eot');
+    src: local('☺'), url('../../fonts/NoticiaText-Regular.woff') format('woff'), url('../../fonts/NoticiaText-Regular.ttf') format('truetype'), url('../../fonts/NoticiaText-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NoticiaText';
+    src: url('../../fonts/NoticiaText-Bold.eot');
+    src: local('☺'), url('../../fonts/NoticiaText-Bold.woff') format('woff'), url('../../fonts/NoticiaText-Bold.ttf') format('truetype'), url('../../fonts/NoticiaText-Bold.svg') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+.footer {
+    height: 120px;
+    background-color: #e83556;
+    padding-top: 20px;
+}
+.content {
+    width: 880px;
+    margin: 0 auto;
+}
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80px;
+    margin-left: 10px;
+}
+
+.title {
+    color: #fff;
+    font-family: NoticiaText;
+    font-weight: 700;
+    font-size: 14px;
+}
+.email {
+    color: #fff;
+    font-family: NoticiaText;
+    font-size: 12px;
+}
+.socialLogo {
+    width: 30px;
+    height: 30px;
+}
+.socialContact {
+    display: flex;
+    justify-content: space-between;
+    width: 110px;
+}

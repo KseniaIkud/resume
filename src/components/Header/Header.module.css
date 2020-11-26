@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'NoticiaText';
+    src: url('../../fonts/NoticiaText-Bold.eot');
+    src: local('☺'), url('../../fonts/NoticiaText-Bold.woff') format('woff'), url('../../fonts/NoticiaText-Bold.ttf') format('truetype'), url('../../fonts/NoticiaText-Bold.svg') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+.header {
+    margin: 0 auto;
+    width: 975px;
+    height: 150px;
+    background-color: #eae5e5;
+}
+.content {
+    margin: 35px 80px;
+    width: 740px;
+    display: flex;
+    justify-content: space-between;
+}
+.name {
+    font-family: NoticiaText;
+    font-weight: 700;
+    font-size: 40px;
+    color: #4d4d4d;
+}
+.specialization {
+    font-size: 18px;
+}
+.navigation {
+    align-self: flex-end;
+    color: #8b8b8b;
+    display: flex;
+    width: 315px;
+    justify-content: space-between;
+    font-size: 14px;
+    font-family: NoticiaText;
+    font-weight: 700;
+}
+.link {
+    list-style: none;
+}
+.active {
+    color: #61d0d4;
+}
