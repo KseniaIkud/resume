@@ -11,7 +11,7 @@ const Header = () => {
         }
 
     }
-    return <header className={classes.header}>
+    return <div className={classes.header}>
         <div className={classes.content}>
             <div className={classes.name}>Ksenia Kudriavtseva
                 <div className={classes.specialization}>Front-end developer</div>
@@ -28,7 +28,7 @@ const Header = () => {
                 </ul>
             </nav>
         </div>
-    </header>
+    </div>
 }
 
 export default Header
