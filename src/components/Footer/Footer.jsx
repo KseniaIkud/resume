@@ -8,13 +8,13 @@ const Footer = () => {
     return <div className={classes.footer}>
         <div className={classes.content}>
             <div className={classes.contacts}>
-                <div className={classes.title}>
+                <div className={classes.contactsTitle}>
                     Contacts
                 </div>
-                <div className={classes.email}>
+                <div className={classes.contactsEmail}>
                     kudriavtseva_k@mail.ru
                 </div>
-                <div className={classes.socialContact}>
+                <div className={classes.social}>
                     <img className={`${classes.socialLogo}`} src={github} alt="github"/>
                     <img className={classes.socialLogo} src={telegram} alt="telegram"/>
                     <img className={classes.socialLogo} src={whatsapp} alt="whatsapp"/>

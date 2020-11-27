@@ -28,24 +28,50 @@
     height: 80px;
     margin-left: 10px;
 }
+@media (max-width: 767px) {
+    .contacts {
+        height: 110px;
+    }
+}
 
-.title {
+.contactsTitle {
     color: #fff;
     font-family: NoticiaText;
     font-weight: 700;
     font-size: 14px;
 }
-.email {
+@media (max-width: 767px) {
+    .contactsTitle {
+        font-size: 17px;
+    }
+}
+.contactsEmail {
     color: #fff;
     font-family: NoticiaText;
     font-size: 12px;
+}
+@media (max-width: 767px) {
+    .contactsEmail {
+        font-size: 15px;
+    }
+}
+.social {
+     display: flex;
+     justify-content: space-between;
+     width: 110px;
+ }
+@media (max-width: 767px) {
+    .social {
+        width: 150px;
+    }
 }
 .socialLogo {
     width: 30px;
     height: 30px;
 }
-.socialContact {
-    display: flex;
-    justify-content: space-between;
-    width: 110px;
+@media (max-width: 767px) {
+    .socialLogo {
+        width: 45px;
+        height: 45px;
+    }
 }
