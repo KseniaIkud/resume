@@ -16,7 +16,8 @@ const Header = () => {
             <div className={classes.name}>Ksenia Kudriavtseva
                 <div className={classes.specialization}>Front-end developer</div>
             </div>
-            <div className={classes.burgerMenu} onClick={onBurgerClick}>
+            <div className={`${classes.burgerMenu} ${isMenuOpen && classes.burgerMenuOpen}`}
+                 onClick={onBurgerClick}>
                 <span/>
             </div>
             <nav className={`${classes.navigation} ${isMenuOpen ? classes.shown : classes.hidden}`}>
