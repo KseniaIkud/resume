@@ -1,0 +1,47 @@
+.wrapper {
+    position: absolute;
+    z-index: 3;
+}
+.menuBurger {
+    width: 44px;
+    height: 44px;
+    background-color: #e2c2b3;
+    border-radius: 5px;
+    position: relative;
+    left: 7px;
+    top: 7px;
+}
+.menuBurger:before,
+.menuBurger:after,
+.menuBurger span {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 4px;
+    background-color: #403234;
+    right: 10px;
+    transition: all .3s ease-in-out;
+}
+.menuBurger:before {
+    top: 13px;
+}
+.menuBurger span {
+    top: 20px;
+}
+.menuBurger:after {
+    bottom: 13px;
+}
+.menuBurgerOpen:before {
+    transform: rotate(-45deg);
+    top: 20px;
+    transition: all .3s ease-in-out;
+}
+.menuBurgerOpen:after {
+    transform: rotate(45deg);
+    bottom: 20px;
+    transition: all .3s ease-in-out;
+}
+.menuBurgerOpen span {
+    display: none;
+}
