@@ -7,6 +7,7 @@
     height: 44px;
     background-color: #e2c2b3;
     border-radius: 5px;
+    border: 1px solid #403234;
     position: relative;
     left: 7px;
     top: 7px;
@@ -44,4 +45,15 @@
 }
 .menuBurgerOpen span {
     display: none;
+}
+
+.menu {
+    position: absolute;
+    left: 0;
+    transition: left .3s ease-in-out;
+}
+.menuClosed {
+    position: absolute;
+    left: -100%;
+    transition: left .3s ease-in-out;
 }

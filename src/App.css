@@ -1,19 +1,3 @@
-/*.app {*/
-/*  margin: 0;*/
-/*  padding: 0;*/
-/*  border: 1px solid #eae5e5;*/
-/*  background-color: #eae5e5;*/
-/*  min-width: 204px;*/
-/*  display: flex;*/
-/*  flex-direction: column;*/
-/*  height: 100vh;*/
-/*}*/
-/*.body {*/
-/*  flex: 1 0 auto;*/
-/*}*/
-/*.footer {*/
-/*  flex: 0 0 auto;*/
-/*}*/
 .app {
     display: grid;
     grid-template-columns: 240px calc(100vw - 240px);

@@ -1,5 +1,265 @@
-.test {
-    color: green;
+
+.projectsPage {
+    padding-top: 52px;
+    min-width: 250px;
+}
+
+.title {
+    text-transform: uppercase;
+    font-family: PlayfairDisplay, serif;
+    font-size: 40px;
+    text-align: center;
+}
+@media (min-width: 769px) {
+    .title {
+        margin-bottom: 20px;
+    }
+}
+@media (min-width: 1024px) {
+    .title {
+        margin-bottom: 40px;
+        font-size: 50px;
+    }
+}
+
+.project {
+    width: 90%;
     margin: 0 auto;
-    width: 50%;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    grid-template-areas: 'main main'
+                        'added text';
+}
+
+@media (min-width: 769px) {
+    .project {
+        grid-template-columns: 5fr 2fr;
+        grid-template-areas: 'main added'
+                            'text added';
+    }
+}
+@media (min-width: 1024px) {
+    .project {
+        grid-template-columns: 2fr 1fr 2fr;
+        grid-template-areas: 'main added text';
+    }
+}
+@media (min-width: 1280px) {
+    .project {
+        grid-template-columns: 2fr 1fr 3fr;
+        grid-template-areas: 'main added text';
+        margin-left: 10%;
+    }
+}
+
+.projectExample {
+    grid-area: main;
+    position: relative;
+}
+
+.imgSlider {
+    display: block;
+    width: 85%;
+    border-radius: 5px;
+    border: 2px solid #403234;
+    margin: 5px auto;
+}
+
+@media (min-width: 769px) {
+    .imgSlider {
+        width: 95%;
+        margin: 0 auto;
+        position: relative;
+    }
+}
+
+.projectAddition {
+    grid-area: added;
+}
+@media (min-width: 769px) {
+    .projectAddition {
+        position: relative;
+    }
+}
+.imgSettings {
+    display: block;
+    width: 100%;
+}
+
+.arrowLeft,
+.arrowRight {
+    display: block;
+    position: absolute;
+    top: 32%;
+    background: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    max-width: 30px;
+}
+
+.arrowLeft {
+    transform: rotate(180deg);
+}
+
+@media (min-width: 769px) {
+    .arrowLeft {
+        top: 52px;
+        left: -15px;
+    }
+}
+@media (min-width: 1280px) {
+    .arrowLeft {
+        top: 95px;
+    }
+}
+.arrowRight {
+    right: 0;
+}
+
+@media (min-width: 769px) {
+    .arrowRight {
+        display: none;
+    }
+}
+.arrowRightShifted {
+    display: none;
+}
+@media (min-width: 769px) {
+    .arrowRightShifted {
+        display: block;
+        position: absolute;
+        right: -20px;
+        top: 52px;
+    }
+}
+@media (min-width: 1280px) {
+    .arrowRightShifted {
+        top: 95px;
+    }
+}
+.imgArrow {
+    display: block;
+    max-width: 30px;
+    height: 30px;
+}
+
+.description {
+    grid-area: text;
+    padding: 0 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+@media (min-width: 1024px) {
+    .description {
+        margin-left: 50px;
+        max-height: 350px;
+    }
+}
+.descriptionTitle {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+@media (min-width: 320px) {
+    .descriptionTitle {
+        font-size: 18px;
+    }
+}
+@media (min-width: 1280px) {
+    .descriptionTitle {
+        font-size: 30px;
+    }
+}
+
+.descriptionExplanation {
+    font-family: Montserrat, sans-serif;
+    color: #403234;
+    font-size: 11px;
+}
+
+@media (min-width: 320px) {
+    .descriptionExplanation {
+        font-size: 15px;
+    }
+}
+@media (min-width: 1280px) {
+    .descriptionExplanation {
+        font-size: 20px;
+    }
+}
+
+.descriptionSubtitle {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 15px 0 5px;
+    font-family: Montserrat, sans-serif;
+}
+
+@media (min-width: 320px) {
+    .descriptionSubtitle {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .descriptionSubtitle {
+        font-size: 22px;
+    }
+}
+
+.descriptionTechnologies {
+    font-family: Montserrat, sans-serif;
+    display: block;
+    margin: 0 0 5px;
+    padding: 0 0 0 15px;
+    color: #403234;
+    font-size: 11px;
+}
+
+@media (min-width: 320px) {
+    .descriptionTechnologies {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .descriptionTechnologies {
+        font-size: 18px;
+    }
+}
+
+.descriptionButton {
+    border: 2px solid #403234;
+    box-shadow: 3px 3px 3px #403234;
+    padding: 5px;
+    width: 100%;
+    border-radius: 3px;
+    background: #687477;
+    text-decoration: none;
+}
+@media (min-width: 769px) {
+    .descriptionButton {
+        width: 120px
+    }
+}
+@media (min-width: 1280px) {
+    .descriptionButton {
+        width: 150px;
+    }
+}
+
+.descriptionLink {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+@media (min-width: 1280px) {
+    .descriptionLink {
+        font-size: 15px;
+    }
 }

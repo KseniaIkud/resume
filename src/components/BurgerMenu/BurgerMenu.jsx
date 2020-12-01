@@ -18,10 +18,12 @@ const BurgerMenu = () => {
                 <span/>
             </div>
         </div>
+        <div className={isMenuOpen ? classes.menu : classes.menuClosed}>
+            <SideBar onMenuClick={onMenuClick} />
+        </div>
 
-
-        {isMenuOpen &&
-            <SideBar onMenuClick={onMenuClick} /> }
+        {/*{isMenuOpen &&*/}
+        {/*    <SideBar onMenuClick={onMenuClick} /> }*/}
     </div>
 }
 
