@@ -4,16 +4,43 @@ import firstPanel from '../../img/projects/panels/first.png'
 import secondPanel from '../../img/projects/panels/second.png'
 import thirdPanel from '../../img/projects/panels/third.png'
 import forthPanel from '../../img/projects/panels/forth.png'
-import firstSlider from '../../img/projects/sliders/first.png'
-import secondSlider from '../../img/projects/sliders/second.png'
-import thirdSlider from '../../img/projects/sliders/third.png'
-import forthSlider from '../../img/projects/sliders/forth.png'
 import arrow from '../../img/arrow.png'
+import RangeSliders from "./RangeSliders";
 
 const Projects = () => {
 
     const panels = [firstPanel, secondPanel, thirdPanel, forthPanel]
-    const sliders = [firstSlider, secondSlider, thirdSlider, forthSlider]
+    const sliders = [{
+        min: 0,
+        max: 1000,
+        initialValue: 200,
+        step: 100,
+        isScale: true,
+        overThumbElement: true,
+    }, {
+        min: -400,
+        max: 1000,
+        initialValue: 0,
+        rightProgressBar: true,
+        overThumbElement: true
+    }, {
+        min: -150,
+        max: 0,
+        leftValue: -80,
+        rightValue: -30,
+        step: 1,
+        isRange: true,
+        overThumbElement: true
+    }, {
+        min: 1000,
+        max: 9000,
+        leftValue: 1500,
+        rightValue: 7500,
+        step: 500,
+        isVertical: true,
+        isScale: true,
+        overThumbElement: true
+    }]
     const [sliderOrder, setSliderOrder] = useState(0)
     const [panel, setPanel] = useState(panels[sliderOrder])
     const [slider, setSlider] = useState(sliders[sliderOrder])
@@ -32,10 +59,13 @@ const Projects = () => {
             my projects
         </div>
         <div className={classes.project}>
-
-
             <div className={classes.projectExample}>
-                <img src={slider} alt="слайдер" className={classes.imgSlider}/>
+                {/*<img src={slider} alt="слайдер" className={classes.imgSlider}/>*/}
+                <div className={classes.sliderWrapper}>
+                    <div className={classes.slider}>
+                        <RangeSliders settings={slider}/>
+                    </div>
+                </div>
                 <button disabled={sliderOrder < 1} className={classes.arrowLeft} onClick={onLeftArrowClick}>
                     <img src={arrow} alt="arrow" className={classes.imgArrow}/>
                 </button>
