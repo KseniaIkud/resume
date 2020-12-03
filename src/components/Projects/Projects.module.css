@@ -57,21 +57,21 @@
     position: relative;
 }
 
-.imgSlider {
-    display: block;
-    width: 85%;
-    border-radius: 5px;
-    border: 2px solid #403234;
-    margin: 5px auto;
-}
+/*.imgSlider {*/
+/*    display: block;*/
+/*    width: 85%;*/
+/*    border-radius: 5px;*/
+/*    border: 2px solid #403234;*/
+/*    margin: 5px auto;*/
+/*}*/
 
-@media (min-width: 769px) {
-    .imgSlider {
-        width: 95%;
-        margin: 0 auto;
-        position: relative;
-    }
-}
+/*@media (min-width: 769px) {*/
+/*    .imgSlider {*/
+/*        width: 95%;*/
+/*        margin: 0 auto;*/
+/*        position: relative;*/
+/*    }*/
+/*}*/
 
 .projectAddition {
     grid-area: added;
@@ -90,7 +90,7 @@
 .arrowRight {
     display: block;
     position: absolute;
-    top: 32%;
+    top: 40%;
     background: none;
     text-decoration: none;
     border: none;
@@ -99,14 +99,26 @@
     max-width: 30px;
 }
 
+.arrowLeft:disabled img,
+.arrowRight:disabled img {
+    opacity: .4;
+}
 .arrowLeft {
     transform: rotate(180deg);
+    left: -10px;
 }
+
 
 @media (min-width: 769px) {
     .arrowLeft {
         top: 52px;
-        left: -15px;
+        left: -22px;
+        border: 3px solid #403234;
+        padding: 0;
+    }
+    .arrowLeft:disabled {
+        background-color: rgba(225, 225, 225, .6);
+        border: 3px solid rgba(225, 225, 225, .8);
     }
 }
 @media (min-width: 1280px) {
@@ -115,7 +127,7 @@
     }
 }
 .arrowRight {
-    right: 0;
+    right: -10px;
 }
 
 @media (min-width: 769px) {
@@ -130,8 +142,14 @@
     .arrowRightShifted {
         display: block;
         position: absolute;
-        right: -20px;
+        right: -29px;
         top: 52px;
+        border: 3px solid #403234;
+        padding: 0;
+    }
+    .arrowRightShifted:disabled {
+        background-color: rgba(225, 225, 225, .6);
+        border: 3px solid rgba(225, 225, 225, .8);
     }
 }
 @media (min-width: 1280px) {
@@ -265,13 +283,15 @@
 }
 
 .sliderWrapper {
-    width: 400px;
+    max-width: 400px;
     height: 300px;
     border: 2px solid #403234;
     border-radius: 4px;
     margin: 10px;
+    background-color: #f7f3f5;
 }
 .slider {
-    width: 250px;
-    margin: 35% auto 0;
+    width: 90%;
+    max-width: 300px;
+    margin: 120px auto;
 }

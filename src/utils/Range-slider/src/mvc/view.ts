@@ -134,14 +134,14 @@ class View {
     createInputs = () => {
         if (this.options.isRange) {
             let leftInput = document.createElement('input')
-            leftInput.classList.add('range-slider__input')
+            leftInput.classList.add('range-slider__window-value')
             leftInput.placeholder = 'left value'
             leftInput.value = String(this.options.defaultValue)
             this.leftInput = leftInput
             this.wrapper.append(this.leftInput)
 
             let rightInput = document.createElement('input')
-            rightInput.classList.add('range-slider__input')
+            rightInput.classList.add('range-slider__window-value', 'range-slider__window-value_right')
             rightInput.placeholder = 'right value'
             rightInput.value = String(this.options.rightValue)
             this.rightInput = rightInput
@@ -149,7 +149,7 @@ class View {
 
         } else {
             let singleInput = document.createElement('input')
-            singleInput.classList.add('range-slider__input')
+            singleInput.classList.add('range-slider__window-value')
             singleInput.placeholder = 'value'
             singleInput.value = String(this.options.defaultValue)
             this.singleInput = singleInput
@@ -259,6 +259,7 @@ class View {
                 }
                 this.thumb.thumbRight.classList.add('range-slider__thumb_hover')
             })
+
         }
 
         this.form.defaultInput.addEventListener('mouseout', () => {

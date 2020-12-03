@@ -113,7 +113,6 @@ class Model {
                     this.limitStep(newValue, 'right')
                     
                 } else {
-                    console.log('алярма')
                     this.observers.forEach(observer => {
                         observer.updateView()
                     })

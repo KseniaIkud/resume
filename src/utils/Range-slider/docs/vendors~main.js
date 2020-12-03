@@ -1,4 +1,4 @@
-import regeneratorRuntime from 'regenerator-runtime'
+import regeneratorRuntime from "regenerator-runtime";
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vendors~main"],{
 
 /***/ "../node_modules/@babel/polyfill/lib/index.js":

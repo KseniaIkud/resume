@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import classes from './Projects.module.css'
+import './range-slider.css'
 import firstPanel from '../../img/projects/panels/first.png'
 import secondPanel from '../../img/projects/panels/second.png'
 import thirdPanel from '../../img/projects/panels/third.png'
@@ -10,7 +11,7 @@ import RangeSliders from "./RangeSliders";
 const Projects = () => {
 
     const panels = [firstPanel, secondPanel, thirdPanel, forthPanel]
-    const sliders = [{
+    const sliderSettings = [{
         min: 0,
         max: 1000,
         initialValue: 200,
@@ -21,6 +22,7 @@ const Projects = () => {
         min: -400,
         max: 1000,
         initialValue: 0,
+        step: 10,
         rightProgressBar: true,
         overThumbElement: true
     }, {
@@ -37,22 +39,22 @@ const Projects = () => {
         leftValue: 1500,
         rightValue: 7500,
         step: 500,
+        isRange: true,
         isVertical: true,
-        isScale: true,
-        overThumbElement: true
+        isScale: true
     }]
     const [sliderOrder, setSliderOrder] = useState(0)
     const [panel, setPanel] = useState(panels[sliderOrder])
-    const [slider, setSlider] = useState(sliders[sliderOrder])
+    const [slider, setSlider] = useState(sliderSettings[sliderOrder])
     const onLeftArrowClick = () => {
         setSliderOrder(sliderOrder - 1)
         setPanel(panels[sliderOrder - 1])
-        setSlider(sliders[sliderOrder - 1])
+        setSlider(sliderSettings[sliderOrder - 1])
     }
     const onRightArrowClick = () => {
         setSliderOrder(sliderOrder + 1)
         setPanel(panels[sliderOrder + 1])
-        setSlider(sliders[sliderOrder + 1])
+        setSlider(sliderSettings[sliderOrder + 1])
     }
     return <div className={classes.projectsPage}>
         <div className={classes.title}>
@@ -60,7 +62,6 @@ const Projects = () => {
         </div>
         <div className={classes.project}>
             <div className={classes.projectExample}>
-                {/*<img src={slider} alt="слайдер" className={classes.imgSlider}/>*/}
                 <div className={classes.sliderWrapper}>
                     <div className={classes.slider}>
                         <RangeSliders settings={slider}/>
