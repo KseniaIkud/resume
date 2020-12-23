@@ -8,6 +8,14 @@ import forthPanel from '../../img/projects/panels/forth.png'
 import arrow from '../../img/arrow.png'
 import RangeSliders from "./RangeSliders";
 
+import mainDesktop from '../../img/projects/website/desktop/main.png'
+import mainMobile from '../../img/projects/website/mobile/main.jpg'
+import calendarDesktop from '../../img/projects/website/desktop/calendar.png'
+import calendarMobile from '../../img/projects/website/mobile/calendar.jpg'
+import guestsDesktop from '../../img/projects/website/desktop/guests.png'
+import guestsMobile from '../../img/projects/website/mobile/guests.jpg'
+import burger from '../../img/projects/website/mobile/burger.jpg'
+
 const Projects = () => {
 
     const panels = [firstPanel, secondPanel, thirdPanel, forthPanel]
@@ -56,6 +64,26 @@ const Projects = () => {
         setPanel(panels[sliderOrder + 1])
         setSlider(sliderSettings[sliderOrder + 1])
     }
+
+    const desktopImages = [mainDesktop, calendarDesktop, guestsDesktop, mainDesktop]
+    const mobileImages = [mainMobile, calendarMobile, guestsMobile, burger]
+    const [siteOrder, setSiteOrder] = useState(0)
+    const [desktop, setDesktop] = useState(desktopImages[siteOrder])
+    const [mobile, setMobile] = useState(mobileImages[siteOrder])
+
+    const onLeftClick = () => {
+        setSiteOrder(siteOrder - 1)
+        setDesktop(desktopImages[siteOrder - 1])
+        setMobile(mobileImages[siteOrder - 1])
+    }
+
+
+    const onRightClick = () => {
+        setSiteOrder(siteOrder + 1)
+        setDesktop(desktopImages[siteOrder + 1])
+        setMobile(mobileImages[siteOrder + 1])
+    }
+
     return <div className={classes.projectsPage}>
         <div className={classes.title}>
             my projects
@@ -81,8 +109,6 @@ const Projects = () => {
                 </button>
             </div>
 
-
-
             <div className={classes.description}>
                 <div className={classes.descriptionTitle}>
                     Range slider
@@ -107,18 +133,30 @@ const Projects = () => {
         </div>
         <div className={classes.project}>
             <div className={classes.projectExample}>
-                <img src="" alt="десктоп версия сайта"/>
+                <img className={classes.sliderWrapper} src={desktop} alt="десктоп версия сайта"/>
+                <button disabled={siteOrder < 1} className={classes.arrowLeft} onClick={onLeftClick}>
+                    <img src={arrow} alt="arrow" className={classes.imgArrow}/>
+                </button>
+                <button disabled={siteOrder > 2} className={classes.arrowRight} onClick={onRightClick}>
+                    <img src={arrow} alt="arrow" className={classes.imgArrow}/>
+                </button>
             </div>
             <div className={classes.projectAddition}>
-                <img src="" alt="мобильная версия сайта"/>
+                <img src={mobile} className={classes.imgSettings} alt="мобильная версия сайта"/>
+                <button disabled={siteOrder > 2} className={`${classes.arrowRight} ${classes.arrowRightShifted}`} onClick={onRightClick}>
+                    <img src={arrow} alt="arrow" className={classes.imgArrow}/>
+                </button>
             </div>
         </div>
+
+
+
         <div className={classes.project}>
             <div className={classes.projectExample}>
-                <img src="" alt="интерфейс игры"/>
+                <img src="" alt="интерфейс туду"/>
             </div>
             <div className={classes.projectAddition}>
-                <img src="" alt="правила игры"/>
+                <img src="" alt="сам список"/>
             </div>
         </div>
     </div>
