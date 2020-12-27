@@ -48,6 +48,27 @@ const Website = () => {
                     <img src={arrow} alt="arrow" className={classes.imgArrow}/>
                 </button>
             </div>
+            <div className={classes.description}>
+                <div className={classes.descriptionTitle}>
+                    Hotel website
+                </div>
+                <div className={classes.descriptionExplanation}>
+                    page making
+                </div>
+                <div className={classes.descriptionSubtitle}>
+                    Main Technologies:
+                </div>
+                <ul className={classes.descriptionTechnologies}>
+                    <li>Pug</li>
+                    <li>CSS (SCSS)</li>
+                    <li>Webpack</li>
+                    <li>jQuery</li>
+                </ul>
+                <button className={classes.descriptionButton}>
+                    <a href="https://github.com/KseniaIkud/Hotel-website" className={classes.descriptionLink}>Github
+                        repository</a>
+                </button>
+            </div>
         </div>
     )
 }
