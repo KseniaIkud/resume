@@ -10,13 +10,10 @@ class SliderExample extends React.Component {
         this.$el.rangeSlider(this.props.settings)
     }
 
-    // перелистывание карусели
     componentDidUpdate(prevProps, prevState, snapshot) {
         this.$el.empty()
         this.$el.rangeSlider(this.props.settings)
     }
-
-    // другая страница
     componentWillUnmount() {
     }
     render() {

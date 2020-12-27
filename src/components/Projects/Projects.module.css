@@ -57,21 +57,7 @@
     position: relative;
 }
 
-/*.imgSlider {*/
-/*    display: block;*/
-/*    width: 85%;*/
-/*    border-radius: 5px;*/
-/*    border: 2px solid #403234;*/
-/*    margin: 5px auto;*/
-/*}*/
 
-/*@media (min-width: 769px) {*/
-/*    .imgSlider {*/
-/*        width: 95%;*/
-/*        margin: 0 auto;*/
-/*        position: relative;*/
-/*    }*/
-/*}*/
 
 .projectAddition {
     grid-area: added;
