@@ -1,10 +1,10 @@
 import React from 'react'
 import $ from 'jquery'
-import '../../utils/Range-slider/docs/main'
-import '../../utils/Range-slider/docs/vendors~main'
-import '../../utils/Range-slider/docs/main.css'
+import '../../../utils/Range-slider/docs/main'
+import '../../../utils/Range-slider/docs/vendors~main'
+import '../../../utils/Range-slider/docs/main.css'
 
-class RangeSliders extends React.Component {
+class SliderExample extends React.Component {
     componentDidMount() {
         this.$el = $(this.el)
         this.$el.rangeSlider(this.props.settings)
@@ -26,4 +26,4 @@ class RangeSliders extends React.Component {
     }
 }
 
-export default RangeSliders
+export default SliderExample
