@@ -17,7 +17,7 @@ const SideBar = (props) => {
                 <ul className={classes.navigationList}>
                     <li className={classes.link}>
                         <NavLink onClick={props.onMenuClick} className={classes.linkDefault} activeClassName={classes.linkActive} to='/home'>
-                            Home
+                            About
                         </NavLink>
                     </li>
                     <li className={classes.link}>
@@ -30,11 +30,6 @@ const SideBar = (props) => {
                             Projects
                         </NavLink>
                     </li>
-                    <li className={classes.link}>
-                        <NavLink onClick={props.onMenuClick} className={classes.linkDefault} activeClassName={classes.linkActive} to='/games'>
-                            Games
-                        </NavLink>
-                    </li>
                 </ul>
             </nav>
             <div className={classes.contacts}>
@@ -45,9 +40,15 @@ const SideBar = (props) => {
                     kudriavtseva_k@mail.ru
                 </div>
                 <div className={classes.contactsSocial}>
-                    <img src={github} alt="gihub link" className={classes.contactsLink}/>
-                    <img src={telegram} alt="telegram link" className={classes.contactsLink}/>
+                    <a href="https://github.com/KseniaIkud">
+                        <img src={github} alt="gihub link" className={classes.contactsLink}/>
+                    </a>
+                    <a href="https://t.me/Xena995">
+                        <img src={telegram} alt="telegram link" className={classes.contactsLink}/>    
+                    </a>
+                    <a href="https://wa.me/4915124410378">
                     <img src={whatsapp} alt="whatsapp link" className={classes.contactsLink}/>
+                    </a>
                 </div>
             </div>
     </div>
