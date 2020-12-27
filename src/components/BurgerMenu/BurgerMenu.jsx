@@ -22,8 +22,6 @@ const BurgerMenu = () => {
             <SideBar onMenuClick={onMenuClick} />
         </div>
 
-        {/*{isMenuOpen &&*/}
-        {/*    <SideBar onMenuClick={onMenuClick} /> }*/}
     </div>
 }
 

@@ -71,6 +71,10 @@
     display: block;
     width: 100%;
 }
+.imgSettingsBorder {
+    border: 2px solid #403234;
+    border-radius: 4px;
+}
 
 .arrowLeft,
 .arrowRight {
@@ -151,7 +155,7 @@
 
 .description {
     grid-area: text;
-    padding: 0 5px;
+    padding: 0 5px 0 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -269,11 +273,11 @@
 }
 
 .sliderWrapper {
-    max-width: 400px;
-    height: 300px;
+    max-width: 92%;
+    display: block;
     border: 2px solid #403234;
     border-radius: 4px;
-    margin: 10px;
+    margin: 10px auto;
     background-color: #f7f3f5;
 }
 .slider {

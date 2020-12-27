@@ -43,7 +43,7 @@ const Website = () => {
                 </button>
             </div>
             <div className={classes.projectAddition}>
-                <img src={mobile} className={classes.imgSettings} alt="мобильная версия сайта"/>
+                <img src={mobile} className={`${classes.imgSettings} ${classes.imgSettingsBorder}`} alt="мобильная версия сайта"/>
                 <button disabled={siteOrder > 2} className={`${classes.arrowRight} ${classes.arrowRightShifted}`} onClick={onRightClick}>
                     <img src={arrow} alt="arrow" className={classes.imgArrow}/>
                 </button>

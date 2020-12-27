@@ -1,29 +1,43 @@
 .app {
-    display: grid;
-    grid-template-columns: 240px calc(100vw - 240px);
-    background-color: #e2c2b3;
+    display: block;
     padding: 0;
     margin: 0;
     width: 100vw;
-    height: 100vh;
+    min-width: 280px;
+    min-height: 100vh;
+    background-color: #e2c2b3;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) {
     .app {
-        display: block;
+        display: grid;
+        grid-template-columns: 240px calc(100vw - 240px);
     }
 }
 
 .menuBurger {
+    display: block;
+}
+.sideBar {
     display: none;
 }
-@media (max-width: 767px) {
+.content {
+    width: 100vw;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+}
+
+@media (min-width: 768px) {
     .menuBurger {
-        display: block;
-    }
-    .sideBar {
         display: none;
     }
+    .sideBar {
+        display: block;
+    }
     .content {
+        background-color: #e2c2b3;
     }
 }
+
+

@@ -13,21 +13,26 @@
     font-style: normal;
 }
 .sideBar {
+    position: absolute;
+    width: 100vw;
+    min-width: 280px;
+    min-height: 100vh;
+    height: 100%;
+    box-sizing: border-box;
+    z-index: 2;
     background-color: #403234;
     color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: calc(100vh - 40px);
     padding: 20px;
-    min-width: 200px;
-
+    
 }
-@media (max-width: 767px) {
+@media (min-width: 768px) {
     .sideBar {
-        width: calc(100vw - 40px);
-        position: absolute;
-        z-index: 2;
+        width: 320px;
+        position: static;
+        
     }
 }
 .introduction {
@@ -56,9 +61,7 @@
     line-height: 20px;
 }
 
-.contactsEmail {
 
-}
 
 .contactsSocial {
     width: 100%;
