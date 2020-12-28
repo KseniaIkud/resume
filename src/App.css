@@ -2,13 +2,13 @@
     display: block;
     padding: 0;
     margin: 0;
-    width: 100vw;
+    max-width: 100vw;
     min-width: 280px;
     min-height: 100vh;
     background-color: #e2c2b3;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .app {
         display: grid;
         grid-template-columns: 240px calc(100vw - 240px);
@@ -28,7 +28,7 @@
     padding-bottom: 20px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .menuBurger {
         display: none;
     }
@@ -37,6 +37,7 @@
     }
     .content {
         background-color: #e2c2b3;
+        max-width: calc(100vw - 240px);
     }
 }
 

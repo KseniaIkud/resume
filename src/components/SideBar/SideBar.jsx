@@ -1,9 +1,9 @@
 import React from 'react'
 import classes from './SideBar.module.css'
-import photo from '../../img/photo.png'
-import github from '../../img/GitHub-Mark.png'
-import telegram from '../../img/telegram.svg'
-import whatsapp from '../../img/whatsapp.png'
+import photo from './img/photo.png'
+import github from './img/GitHub-Mark.png'
+import telegram from './img/telegram.svg'
+import whatsapp from './img/whatsapp.png'
 import {NavLink} from "react-router-dom";
 
 

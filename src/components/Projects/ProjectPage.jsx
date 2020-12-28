@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from './Projects.module.css'
+import classes from './ProjectPage.module.css'
 import RangeSlider from './RangeSlider/RangeSlider'
 import Website from './Website/Website'
 
@@ -9,8 +9,11 @@ const Projects = () => {
             <div className={classes.title}>
                 my projects
             </div>
-            <RangeSlider />
+            <div className={classes.project}>
+                <RangeSlider />
+            </div>
             <Website />
+            
         </div>
     )
 }

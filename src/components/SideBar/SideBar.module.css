@@ -28,11 +28,10 @@
     padding: 20px;
     
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .sideBar {
-        width: 320px;
         position: static;
-        
+        width: 100%;
     }
 }
 .introduction {

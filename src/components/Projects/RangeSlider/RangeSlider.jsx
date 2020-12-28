@@ -1,15 +1,12 @@
-import React, {useState} from 'react'
-
-import classes from '../Projects.module.css'
+import React from 'react'
 import './range-slider.css'
 
-import firstPanel from '../../../img/projects/panels/first.png'
-import secondPanel from '../../../img/projects/panels/second.png'
-import thirdPanel from '../../../img/projects/panels/third.png'
-import forthPanel from '../../../img/projects/panels/forth.png'
-import arrow from '../../../img/arrow.png'
+import firstPanel from './img/panels/first.png'
+import secondPanel from './img/panels/second.png'
+import thirdPanel from './img/panels/third.png'
+import forthPanel from './img/panels/forth.png'
 
-import SliderExample from "./SliderExample";
+import CommonProject from '../CommonProject/CommonProject'
 
 
 const RangeSlider = () => {
@@ -46,64 +43,15 @@ const RangeSlider = () => {
         isVertical: true,
         isScale: true
     }]
-    const [sliderOrder, setSliderOrder] = useState(0)
-    const [panel, setPanel] = useState(panels[sliderOrder])
-    const [slider, setSlider] = useState(sliderSettings[sliderOrder])
-    const onLeftArrowClick = () => {
-        setSliderOrder(sliderOrder - 1)
-        setPanel(panels[sliderOrder - 1])
-        setSlider(sliderSettings[sliderOrder - 1])
-    }
-    const onRightArrowClick = () => {
-        setSliderOrder(sliderOrder + 1)
-        setPanel(panels[sliderOrder + 1])
-        setSlider(sliderSettings[sliderOrder + 1])
+    const description = {
+        title: 'Range Slider',
+        explanation: 'plugin for jQuery',
+        technologies: ['TypeScript', 'CSS (SCSS)', 'Webpack', 'MVC pattern'],
     }
 
-    return <div className={classes.project}>
-            <div className={classes.projectExample}>
-                <div className={classes.sliderWrapper}>
-                    <div className={classes.slider}>
-                        <SliderExample settings={slider}/>
-                    </div>
-                </div>
-                <button disabled={sliderOrder < 1} className={classes.arrowLeft} onClick={onLeftArrowClick}>
-                    <img src={arrow} alt="arrow" className={classes.imgArrow}/>
-                </button>
-                <button disabled={sliderOrder > 2} className={classes.arrowRight} onClick={onRightArrowClick}>
-                    <img src={arrow} alt="arrow" className={classes.imgArrow}/>
-                </button>
-            </div>
-            <div className={classes.projectAddition}>
-                <img src={panel} alt="настройки" className={classes.imgSettings}/>
-                <button disabled={sliderOrder > 2} className={`${classes.arrowRight} ${classes.arrowRightShifted}`} onClick={onRightArrowClick}>
-                    <img src={arrow} alt="arrow" className={classes.imgArrow}/>
-                </button>
-            </div>
-
-            <div className={classes.description}>
-                <div className={classes.descriptionTitle}>
-                    Range slider
-                </div>
-                <div className={classes.descriptionExplanation}>
-                    plugin for jQuery
-                </div>
-                <div className={classes.descriptionSubtitle}>
-                    Main Technologies:
-                </div>
-                <ul className={classes.descriptionTechnologies}>
-                    <li>TypeScript</li>
-                    <li>CSS (SCSS)</li>
-                    <li>Webpack</li>
-                    <li>MVC pattern</li>
-                </ul>
-                <button className={classes.descriptionButton}>
-                    <a href="https://github.com/KseniaIkud/Range-slider" className={classes.descriptionLink}>Github
-                        repository</a>
-                </button>
-            </div>
-        </div>
-        
+    return (
+        <CommonProject mainList={sliderSettings} additionList={panels} description={description} github={'https://github.com/KseniaIkud/Range-slider'} isSlider={true}/>
+    )
 }
 
 export default RangeSlider

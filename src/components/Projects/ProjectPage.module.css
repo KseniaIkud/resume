@@ -1,0 +1,40 @@
+.projectsPage {
+    padding-top: 52px;
+    
+}
+@media (min-width: 1024px) {
+    .projectsPage {
+        max-width: calc (100vw - 240px);
+    }           
+}
+@media (min-width: 1200px) {
+    .projectsPage {
+        padding-top: 80px;
+    }           
+}
+
+.title {
+    text-transform: uppercase;
+    font-family: PlayfairDisplay, serif;
+    font-size: 40px;
+    text-align: center;
+}
+@media (min-width: 769px) {
+    .title {
+        margin-bottom: 20px;
+    }
+}
+@media (min-width: 1024px) {
+    .title {
+        margin-bottom: 40px;
+        font-size: 50px;
+    }
+}
+@media (min-width: 1200px) {
+    .title {
+        margin-bottom: 60px;
+    }
+}
+.project {
+    margin-bottom: 50px;
+}

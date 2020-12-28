@@ -1,75 +1,26 @@
-import React, {useState} from 'react'
-import classes from '../Projects.module.css'
+import React from 'react'
 
-import arrow from '../../../img/arrow.png'
-
-import mainDesktop from '../../../img/projects/website/desktop/main.png'
-import mainMobile from '../../../img/projects/website/mobile/main.jpg'
-import calendarDesktop from '../../../img/projects/website/desktop/calendar.png'
-import calendarMobile from '../../../img/projects/website/mobile/calendar.jpg'
-import guestsDesktop from '../../../img/projects/website/desktop/guests.png'
-import guestsMobile from '../../../img/projects/website/mobile/guests.jpg'
-import burger from '../../../img/projects/website/mobile/burger.jpg'
+import mainDesktop from './img/desktop/main.png'
+import mainMobile from './img/mobile/main.jpg'
+import calendarDesktop from './img/desktop/calendar.png'
+import calendarMobile from './img/mobile/calendar.jpg'
+import guestsDesktop from './img/desktop/guests.png'
+import guestsMobile from './img/mobile/guests.jpg'
+import burger from './img/mobile/burger.jpg'
+import CommonProject from '../CommonProject/CommonProject'
 
 const Website = () => {
     const desktopImages = [mainDesktop, calendarDesktop, guestsDesktop, mainDesktop]
     const mobileImages = [mainMobile, calendarMobile, guestsMobile, burger]
-    const [siteOrder, setSiteOrder] = useState(0)
-    const [desktop, setDesktop] = useState(desktopImages[siteOrder])
-    const [mobile, setMobile] = useState(mobileImages[siteOrder])
 
-    const onLeftClick = () => {
-        setSiteOrder(siteOrder - 1)
-        setDesktop(desktopImages[siteOrder - 1])
-        setMobile(mobileImages[siteOrder - 1])
+    const description = {
+        title: 'Hotel website',
+        explanation: 'page making',
+        technologies: ['Pug', 'CSS (SCSS)', 'Webpack', 'jQuery'],
     }
 
-
-    const onRightClick = () => {
-        setSiteOrder(siteOrder + 1)
-        setDesktop(desktopImages[siteOrder + 1])
-        setMobile(mobileImages[siteOrder + 1])
-    }
-
-    return (
-        <div className={classes.project}>
-            <div className={classes.projectExample}>
-                <img className={classes.sliderWrapper} src={desktop} alt="десктоп версия сайта"/>
-                <button disabled={siteOrder < 1} className={classes.arrowLeft} onClick={onLeftClick}>
-                    <img src={arrow} alt="arrow" className={classes.imgArrow}/>
-                </button>
-                <button disabled={siteOrder > 2} className={classes.arrowRight} onClick={onRightClick}>
-                    <img src={arrow} alt="arrow" className={classes.imgArrow}/>
-                </button>
-            </div>
-            <div className={classes.projectAddition}>
-                <img src={mobile} className={`${classes.imgSettings} ${classes.imgSettingsBorder}`} alt="мобильная версия сайта"/>
-                <button disabled={siteOrder > 2} className={`${classes.arrowRight} ${classes.arrowRightShifted}`} onClick={onRightClick}>
-                    <img src={arrow} alt="arrow" className={classes.imgArrow}/>
-                </button>
-            </div>
-            <div className={classes.description}>
-                <div className={classes.descriptionTitle}>
-                    Hotel website
-                </div>
-                <div className={classes.descriptionExplanation}>
-                    page making
-                </div>
-                <div className={classes.descriptionSubtitle}>
-                    Main Technologies:
-                </div>
-                <ul className={classes.descriptionTechnologies}>
-                    <li>Pug</li>
-                    <li>CSS (SCSS)</li>
-                    <li>Webpack</li>
-                    <li>jQuery</li>
-                </ul>
-                <button className={classes.descriptionButton}>
-                    <a href="https://github.com/KseniaIkud/Hotel-website" className={classes.descriptionLink}>Github
-                        repository</a>
-                </button>
-            </div>
-        </div>
+    return ( 
+        <CommonProject mainList={desktopImages} additionList={mobileImages} description={description} github={'https://github.com/KseniaIkud/Hotel-website'} isBorder={true}/>
     )
 }
 
