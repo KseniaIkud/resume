@@ -17,7 +17,7 @@
     width: 100vw;
     min-width: 280px;
     min-height: 100vh;
-    height: 100%;
+
     box-sizing: border-box;
     z-index: 2;
     background-color: #403234;
@@ -25,7 +25,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px;
+    padding: 20px 20px 20px 0;
     
 }
 @media (min-width: 1024px) {
@@ -45,40 +45,61 @@
     display: block;
     margin-bottom: 15px;
 }
-.contacts {
-    width: 150px;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-family: Montserrat, sans-serif;
-}
-
-.contactsTitle {
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 20px;
-}
-
-
-
-.contactsSocial {
+.download {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
 }
-
-.contactsLink {
+.downloadButton {
+    margin-left: 0 auto;
+    background: #e2c2b3;
+    border-radius: 10px;
+    width: 80%;
+    margin: 0 6%;
+    height: 50px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.downloadButton::after {
+    content: '';
+    display: block;
     width: 40px;
     height: 40px;
+    background: url('./img/download.svg') no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: 5px;
 }
-
+.downloadButton:hover {
+    width: 82%;
+    height: 54px;
+}
+.downloadButton:hover .downloadLink {
+    padding-top: 16px;
+}
+.downloadLink {
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Montserrat, sans-serif;
+    color: #403234;
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 13px 0 0 10px;
+    box-sizing: border-box;
+}
+.downloadText {
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    width: 90%;
+    margin-top: 5px;
+}
 .navigation {
     margin: 0 auto;
-    width: 200px;
+    width: 90%;
 
 }
-
 .navigationList {
     list-style: none;
     display: flex;
@@ -111,4 +132,32 @@
 .linkActive, .linkActive:hover, .linkDefault:active {
     box-shadow: inset 10px 0 0 0 #687477;
     transition: all .3s ease-in-out;
+}
+.contacts {
+    width: 150px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: Montserrat, sans-serif;
+    margin: 0 0 5px 10px;
+}
+
+.contactsTitle {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+
+
+.contactsSocial {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contactsLink {
+    width: 40px;
+    height: 40px;
 }

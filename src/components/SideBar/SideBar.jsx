@@ -13,6 +13,16 @@ const SideBar = (props) => {
                 <img src={photo} alt="photo" className={classes.introductionPhoto}/>
                 Front-end developer
             </div>
+            <div className={classes.download}>
+                <div className={classes.downloadButton}>
+                    <a className={classes.downloadLink} href="https://yadi.sk/i/sYtwS5gPxjqsEg">
+                        Download CV
+                    </a>
+                </div>
+                <div className={classes.downloadText}>
+                    from yandex disk
+                </div>
+            </div>
             <nav className={classes.navigation}>
                 <ul className={classes.navigationList}>
                     <li className={classes.link}>
