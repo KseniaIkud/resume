@@ -72,7 +72,7 @@
     display: block;
     position: absolute;
     top: 40%;
-    background: url('./img/arrow.png') no-repeat;
+    background: url('../img/arrow.png') no-repeat;
     background-size: cover;
     text-decoration: none;
     border: none;
@@ -241,6 +241,9 @@
     border-radius: 3px;
     background: #687477;
     text-decoration: none;
+}
+.descriptionButton:hover {
+    box-shadow: 7px 7px 3px #403234;
 }
 @media (min-width: 769px) {
     .descriptionButton {
