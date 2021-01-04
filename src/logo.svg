@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
     <g>
-        <rect height='200' width="200" y="113.4375" x="177.5" stroke-width="5" stroke="#403234" fill="#E2C2B2"></rect>
-        <ellipse ry="65.5" rx="65.5" cy="202" cx="270" fill="#403234"></ellipse>
+        <rect height='200' width="200" y="0" x="0" stroke-width="5" stroke="#403234" fill="#E2C2B2"></rect>
+        <ellipse ry="65.5" rx="65.5" cy="100" cx="100" fill="#403234"></ellipse>
     </g>
 </svg>
