@@ -7,7 +7,7 @@ const Home = () => {
             About Me
         </div>
         <div className={classes.description}>
-            Highly motivated and seeking an entry-level position as a front-end developer. 
+            Seeking an entry-level position as a front-end developer. 
             Have experience with TypeScript and React. 
             If needed, ready to learn other technologies quickly. 
             Please visit my <a href='https://github.com/KseniaIkud'>GitHub</a> profile to have a look at my code. 
