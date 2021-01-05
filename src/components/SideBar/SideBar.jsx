@@ -21,50 +21,53 @@ const SideBar = (props) => {
     return <div className={classes.sideBar}>
             <div className={classes.introduction}>
                 <img src={photo} alt="photo" className={classes.introductionPhoto}/>
-                Front-end developer
+                {props.language === 'russian' && 'Front-end разработчик'} 
+                {props.language === 'english' && 'Front-end developer'}
             </div>
             <div className={classes.languageToggle}>
                 <button 
                 onClick={setEnglishLanguage}
                 className={`${classes.languageToggleButton} ${props.language === 'english' ? classes.languageToggleButtonActive : null}`}>
-                    En</button>
+                    Eng</button>
                 <button 
                 onClick={setRussianLanguage}
                 className={`${classes.languageToggleButton} ${props.language === 'russian' ? classes.languageToggleButtonActive : null}`}>
-                    Ru</button>
+                    Рус</button>
             </div>
             <div className={classes.download}>
                 <div className={classes.downloadButton}>
                     <a className={classes.downloadLink} href="https://yadi.sk/i/sYtwS5gPxjqsEg">
-                        Download CV
+                        {props.language === 'russian' && 'Скачать CV'} 
+                        {props.language === 'english' && 'Download CV'}
                     </a>
                 </div>
                 <div className={classes.downloadText}>
-                    from yandex disk
+                    {props.language === 'russian' && 'с яндекс диска'} 
+                    {props.language === 'english' && 'from yandex disk'}
                 </div>
             </div>
             <nav className={classes.navigation}>
                 <ul className={classes.navigationList}>
                     <li className={classes.link}>
                         <NavLink onClick={props.onMenuClick} className={classes.linkDefault} activeClassName={classes.linkActive} to='/home'>
-                            About
+                        {props.language === 'russian' && 'Обо мне'} {props.language === 'english' && 'About'}
                         </NavLink>
                     </li>
                     <li className={classes.link}>
                         <NavLink onClick={props.onMenuClick} className={classes.linkDefault} activeClassName={classes.linkActive} to='/skills'>
-                            Skills
+                        {props.language === 'russian' && 'Навыки'} {props.language === 'english' && 'Skills'}
                         </NavLink>
                     </li>
                     <li className={classes.link}>
                         <NavLink onClick={props.onMenuClick} className={classes.linkDefault} activeClassName={classes.linkActive} to='/projects'>
-                            Projects
+                        {props.language === 'russian' && 'Проекты'} {props.language === 'english' && 'Projects'}
                         </NavLink>
                     </li>
                 </ul>
             </nav>
             <div className={classes.contacts}>
                 <div className={classes.contactsTitle}>
-                    Contacts
+                    {props.language === 'russian' && 'Контакты'} {props.language === 'english' && 'Contacts'}
                 </div>
                 <div className={classes.contactsEmail}>
                     kudriavtseva_k@mail.ru
