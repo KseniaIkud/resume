@@ -8,7 +8,7 @@ import Projects from "./components/Projects/ProjectPage";
 import BurgerMenu from "./components/BurgerMenu/BurgerMenu";
 
 const App = () => {
-    const [isLanguageRus, toggleLanguage] = useState(false)
+    const [language, toggleLanguage] = useState('english')
     return (
         <BrowserRouter>
             <div className='app'>
@@ -16,11 +16,11 @@ const App = () => {
                     <BurgerMenu />
                 </div>
                 <div className='sideBar'>
-                    <SideBar isLanguageRus={isLanguageRus} toggleLanguage={toggleLanguage} />
+                    <SideBar language={language} toggleLanguage={toggleLanguage} />
                 </div>
                 <div className='content'>
                     <Route path='/home'>
-                        <Home isLanguageRus={isLanguageRus}/>
+                        <Home language={language}/>
                     </Route>
                     <Route path='/skills'>
                         <Skills />

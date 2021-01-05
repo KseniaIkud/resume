@@ -9,13 +9,13 @@ import {NavLink} from "react-router-dom";
 
 const SideBar = (props) => {
     const setEnglishLanguage = () => {
-        if (props.isLanguageRus) {
-            props.toggleLanguage(false)
+        if (props.language!== 'english') {
+            props.toggleLanguage('english')
         }
     }
     const setRussianLanguage = () => {
-        if (!props.isLanguageRus) {
-            props.toggleLanguage(true)
+        if (props.language!== 'russian') {
+            props.toggleLanguage('russian')
         }
     }
     return <div className={classes.sideBar}>
@@ -26,11 +26,11 @@ const SideBar = (props) => {
             <div className={classes.languageToggle}>
                 <button 
                 onClick={setEnglishLanguage}
-                className={`${classes.languageToggleButton} ${props.isLanguageRus || classes.languageToggleButtonActive}`}>
+                className={`${classes.languageToggleButton} ${props.language === 'english' ? classes.languageToggleButtonActive : null}`}>
                     En</button>
                 <button 
                 onClick={setRussianLanguage}
-                className={`${classes.languageToggleButton} ${props.isLanguageRus && classes.languageToggleButtonActive}`}>
+                className={`${classes.languageToggleButton} ${props.language === 'russian' ? classes.languageToggleButtonActive : null}`}>
                     Ru</button>
             </div>
             <div className={classes.download}>
