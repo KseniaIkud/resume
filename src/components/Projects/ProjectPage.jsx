@@ -6,9 +6,9 @@ import Website from './Website/Website'
 const Projects = () => {
     return (
         <div className={classes.projectsPage}>
-            <div className={classes.title}>
+            <h1 className={classes.title}>
                 my projects
-            </div>
+            </h1>
             <div className={classes.project}>
                 <RangeSlider />
             </div>

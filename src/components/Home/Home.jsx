@@ -26,9 +26,9 @@ const AboutText = (props) => {
 const Home = (props) => {
     
     return <div className={classes.content}>
-        <div className={classes.title}>
+        <h1 className={classes.title}>
             {props.language === 'russian' ? 'Обо мне' : 'About Me'}
-        </div>
+        </h1>
         <div className={classes.description}>
             <AboutText language={props.language} />
             <ul>
