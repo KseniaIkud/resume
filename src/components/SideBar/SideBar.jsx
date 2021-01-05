@@ -13,6 +13,10 @@ const SideBar = (props) => {
                 <img src={photo} alt="photo" className={classes.introductionPhoto}/>
                 Front-end developer
             </div>
+            <div className={classes.languageToggle}>
+                <button className={classes.languageToggleButton}>En</button>
+                <button className={`${classes.languageToggleButton} ${classes.languageToggleButtonActive}`}>Ru</button>
+            </div>
             <div className={classes.download}>
                 <div className={classes.downloadButton}>
                     <a className={classes.downloadLink} href="https://yadi.sk/i/sYtwS5gPxjqsEg">
