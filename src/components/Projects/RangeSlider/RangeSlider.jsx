@@ -9,7 +9,7 @@ import forthPanel from './img/panels/forth.png'
 import CommonProject from '../CommonProject/CommonProject'
 
 
-const RangeSlider = () => {
+const RangeSlider = (props) => {
     const panels = [firstPanel, secondPanel, thirdPanel, forthPanel]
     const sliderSettings = [{
         min: 0,
@@ -44,13 +44,13 @@ const RangeSlider = () => {
         isScale: true
     }]
     const description = {
-        title: 'Range Slider',
-        explanation: 'plugin for jQuery',
-        technologies: ['TypeScript', 'CSS (SCSS)', 'Webpack', 'MVC pattern'],
+        title: props.language === 'russian' && 'Слайдер с диапазоном' || props.language === 'english' && 'Range Slider',
+        explanation: props.language === 'russian' && 'плагин для jQuery' || props.language === 'english' && 'plugin for jQuery',
+        technologies: ['TypeScript', 'CSS (SCSS)', 'Webpack', props.language === 'russian' && 'MVC паттерн' || props.language === 'english' && 'MVC pattern']
     }
 
     return (
-        <CommonProject mainList={sliderSettings} additionList={panels} description={description} github={'https://github.com/KseniaIkud/Range-slider'} isSlider={true}/>
+        <CommonProject language={props.language} mainList={sliderSettings} additionList={panels} description={description} github={'https://github.com/KseniaIkud/Range-slider'} isSlider={true}/>
     )
 }
 

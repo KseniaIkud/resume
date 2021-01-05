@@ -3,16 +3,16 @@ import classes from './ProjectPage.module.css'
 import RangeSlider from './RangeSlider/RangeSlider'
 import Website from './Website/Website'
 
-const Projects = () => {
+const Projects = (props) => {
     return (
         <div className={classes.projectsPage}>
             <h1 className={classes.title}>
-                my projects
+    {props.language === 'russian' ? 'мои проекты' : 'my projects'}
             </h1>
             <div className={classes.project}>
-                <RangeSlider />
+                <RangeSlider language={props.language} />
             </div>
-            <Website />
+            <Website language={props.language}/>
             
         </div>
     )

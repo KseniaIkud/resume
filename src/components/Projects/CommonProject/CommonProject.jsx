@@ -55,7 +55,8 @@ const CommonProject = (props) => {
                     {props.description.explanation}
                 </div>
                 <div className={classes.descriptionSubtitle}>
-                    Main Technologies:
+                    {props.language === 'russian' && 'Основные технологии:'}
+                    {props.language === 'english' && 'Main Technologies:'}
                 </div>
                 <ul className={classes.descriptionTechnologies}>
                     <li>{props.description.technologies[0]}</li>
@@ -64,8 +65,10 @@ const CommonProject = (props) => {
                     <li>{props.description.technologies[3]}</li>
                 </ul>
                 <button className={classes.descriptionButton}>
-                    <a href={props.github} className={classes.descriptionLink}>Github
-                        repository</a>
+                    <a href={props.github} className={classes.descriptionLink}>
+                        {props.language === 'russian' && 'Репозиторий GitHub'}
+                        {props.language === 'english' && 'Github repository'}
+                    </a>
                 </button>
             </div>
         </div>
