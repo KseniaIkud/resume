@@ -1,11 +1,11 @@
 import React from 'react'
 import classes from './Skills.module.css'
 
-const Skills = () => {
+const Skills = (props) => {
     return (
     <div className={classes.content}>
         <h1 className={classes.title}>
-            Main Skills
+            {props.language === 'russian' ? 'Основные навыки' : 'Main Skills'}
         </h1>
         <div className={classes.skills}>
             <div>
@@ -28,10 +28,10 @@ const Skills = () => {
             <div className={classes.line}></div>
             <div>
                 <ul>
-                    <li className={classes.technology}>Languages
+                    <li className={classes.technology}> {props.language === 'russian' ? 'Языки' : 'Languages'}
                         <ul className={classes.clarification}>
-                            <li className={classes.package}>Russian</li>
-                            <li className={classes.package}>English - B2</li>
+                            <li className={classes.package}>{props.language === 'russian' ? 'Русский' : 'Russian'}</li>
+                            <li className={classes.package}>{props.language === 'russian' ? 'Английский' : 'English'} - B2</li>
                         </ul>
                     </li> 
                 </ul>

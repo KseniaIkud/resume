@@ -23,7 +23,7 @@ const App = () => {
                         <Home language={language}/>
                     </Route>
                     <Route path='/skills'>
-                        <Skills />
+                        <Skills language={language}/>
                     </Route>
                     <Route path='/projects'>
                         <Projects />
