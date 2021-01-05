@@ -7,7 +7,7 @@ import Skills from "./components/Skills/Skills";
 import Projects from "./components/Projects/ProjectPage";
 import BurgerMenu from "./components/BurgerMenu/BurgerMenu";
 
-function App() {
+const App = () => {
     return (
         <BrowserRouter>
             <div className='app'>

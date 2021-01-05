@@ -57,6 +57,7 @@
     background-color: #e2c2b3;
     cursor: pointer;
     border-radius: 4px;
+    outline: none;
 }
 .languageToggleButton:hover {
     width: 55px;
