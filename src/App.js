@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './App.css';
 import {Route, BrowserRouter} from "react-router-dom";
 import SideBar from "./components/SideBar/SideBar";
@@ -8,6 +8,7 @@ import Projects from "./components/Projects/ProjectPage";
 import BurgerMenu from "./components/BurgerMenu/BurgerMenu";
 
 const App = () => {
+    const [isLanguageRus, toggleLanguage] = useState(false)
     return (
         <BrowserRouter>
             <div className='app'>
@@ -15,11 +16,11 @@ const App = () => {
                     <BurgerMenu />
                 </div>
                 <div className='sideBar'>
-                    <SideBar />
+                    <SideBar isLanguageRus={isLanguageRus} toggleLanguage={toggleLanguage} />
                 </div>
                 <div className='content'>
                     <Route path='/home'>
-                        <Home />
+                        <Home isLanguageRus={isLanguageRus}/>
                     </Route>
                     <Route path='/skills'>
                         <Skills />

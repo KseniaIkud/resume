@@ -8,14 +8,30 @@ import {NavLink} from "react-router-dom";
 
 
 const SideBar = (props) => {
+    const setEnglishLanguage = () => {
+        if (props.isLanguageRus) {
+            props.toggleLanguage(false)
+        }
+    }
+    const setRussianLanguage = () => {
+        if (!props.isLanguageRus) {
+            props.toggleLanguage(true)
+        }
+    }
     return <div className={classes.sideBar}>
             <div className={classes.introduction}>
                 <img src={photo} alt="photo" className={classes.introductionPhoto}/>
                 Front-end developer
             </div>
             <div className={classes.languageToggle}>
-                <button className={classes.languageToggleButton}>En</button>
-                <button className={`${classes.languageToggleButton} ${classes.languageToggleButtonActive}`}>Ru</button>
+                <button 
+                onClick={setEnglishLanguage}
+                className={`${classes.languageToggleButton} ${props.isLanguageRus || classes.languageToggleButtonActive}`}>
+                    En</button>
+                <button 
+                onClick={setRussianLanguage}
+                className={`${classes.languageToggleButton} ${props.isLanguageRus && classes.languageToggleButtonActive}`}>
+                    Ru</button>
             </div>
             <div className={classes.download}>
                 <div className={classes.downloadButton}>
