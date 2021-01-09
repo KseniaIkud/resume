@@ -52,7 +52,6 @@
     left: 0;
     transition: left .3s ease-in-out;
     background-color: #403234;
-    width: 100vw;
 }
 .menuClosed {
     position: absolute;
