@@ -18,7 +18,7 @@ const BurgerMenu = (props) => {
                 <span/>
             </div>
         </div>
-        <div className={isMenuOpen ? classes.menu : classes.menuClosed}>
+        <div className={isMenuOpen ? classes.menu : classes.menuClosed}>           
             <SideBar onMenuClick={onMenuClick} language={props.language} toggleLanguage={props.toggleLanguage}/>
         </div>
 

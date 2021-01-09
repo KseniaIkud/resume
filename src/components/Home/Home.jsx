@@ -32,7 +32,7 @@ const Home = (props) => {
         <div className={classes.description}>
             <AboutText language={props.language} />
             <ul>
-                <li>kudriavtseva_k@mail.ru</li>
+                <li>kudriavtseva_k @mail.ru</li>
                 <li>+79319688544 (whatsapp, telegram)</li>
             </ul>
         </div>
