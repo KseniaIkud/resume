@@ -13,7 +13,7 @@ const App = () => {
         <BrowserRouter>
             <div className='app'>
                 <div className={'menuBurger'}>
-                    <BurgerMenu />
+                    <BurgerMenu language={language} toggleLanguage={toggleLanguage} />
                 </div>
                 <div className='sideBar'>
                     <SideBar language={language} toggleLanguage={toggleLanguage} />

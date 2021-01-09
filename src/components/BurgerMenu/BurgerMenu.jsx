@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import classes from './BurgerMenu.module.css'
 import SideBar from "../SideBar/SideBar";
 
-const BurgerMenu = () => {
+const BurgerMenu = (props) => {
     const [isMenuOpen, toggleMenu] = useState(false)
     const onMenuClick = () => {
             if (isMenuOpen) {
@@ -19,7 +19,7 @@ const BurgerMenu = () => {
             </div>
         </div>
         <div className={isMenuOpen ? classes.menu : classes.menuClosed}>
-            <SideBar onMenuClick={onMenuClick} />
+            <SideBar onMenuClick={onMenuClick} language={props.language} toggleLanguage={props.toggleLanguage}/>
         </div>
 
     </div>
