@@ -40,9 +40,11 @@
 }
 
 .introductionPhoto {
-    max-width: 140px;
+    max-width: 170px;
+    height: 170px;
+    background: url('./img/photo.png') no-repeat;
+    background-size: cover;
     border-radius: 50%;
-    display: block;
     margin: 0 auto 15px;
 }
 .languageToggle {
@@ -181,4 +183,25 @@
 .contactsLink {
     width: 40px;
     height: 40px;
+}
+.github {
+    display: block;
+    width: 41px;
+    height: 40px;
+    background: url('./img/GitHub-Mark.png') no-repeat;
+    background-size: cover;
+}
+.telegram {
+    display: block;
+    width: 41px;
+    height: 40px;
+    background: url('./img/telegram.svg') no-repeat;
+    background-size: cover;
+}
+.whatsapp {
+    display: block;
+    width: 41px;
+    height: 40px;
+    background: url('./img/whatsapp.png') no-repeat;
+    background-size: cover;
 }

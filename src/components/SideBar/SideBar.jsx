@@ -1,9 +1,5 @@
 import React from 'react'
 import classes from './SideBar.module.css'
-import photo from './img/photo.png'
-import github from './img/GitHub-Mark.png'
-import telegram from './img/telegram.svg'
-import whatsapp from './img/whatsapp.png'
 import {NavLink} from "react-router-dom";
 
 
@@ -20,7 +16,7 @@ const SideBar = (props) => {
     }
     return <div className={classes.sideBar}>
             <div className={classes.introduction}>
-                <img src={photo} alt="photo" className={classes.introductionPhoto}/>
+                <div alt="photo" className={classes.introductionPhoto}/>
                 {props.language === 'russian' && 'Front-end разработчик'} 
                 {props.language === 'english' && 'Front-end developer'}
             </div>
@@ -73,15 +69,9 @@ const SideBar = (props) => {
                     kudriavtseva_k@mail.ru
                 </div>
                 <div className={classes.contactsSocial}>
-                    <a href="https://github.com/KseniaIkud">
-                        <img src={github} alt="gihub link" className={classes.contactsLink}/>
-                    </a>
-                    <a href="https://t.me/Xena995">
-                        <img src={telegram} alt="telegram link" className={classes.contactsLink}/>    
-                    </a>
-                    <a href="https://wa.me/4915124410378">
-                    <img src={whatsapp} alt="whatsapp link" className={classes.contactsLink}/>
-                    </a>
+                    <a href="https://github.com/KseniaIkud" className={classes.github}></a>
+                    <a href="https://t.me/Xena995" className={classes.telegram}></a>
+                    <a href="https://wa.me/4915124410378" className={classes.whatsapp}></a>
                 </div>
             </div>
     </div>
