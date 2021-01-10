@@ -6,6 +6,7 @@ import Home from "./components/Home/Home";
 import Skills from "./components/Skills/Skills";
 import Projects from "./components/Projects/ProjectPage";
 import BurgerMenu from "./components/BurgerMenu/BurgerMenu";
+import Start from "./components/Start/Start"
 
 const App = () => {
     const [language, toggleLanguage] = useState('english')
@@ -19,6 +20,12 @@ const App = () => {
                     <SideBar language={language} toggleLanguage={toggleLanguage} />
                 </div>
                 <div className='content'>
+                    <Route exact path='/'>
+                        <Start language={language}/>
+                    </Route>
+                    <Route path='/resume'>
+                        <Start language={language}/>
+                    </Route>
                     <Route path='/home'>
                         <Home language={language}/>
                     </Route>

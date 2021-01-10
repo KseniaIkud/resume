@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'PlayfairDisplay';
+    src: url('../../fonts/PlayfairDisplay-Medium.eot');
+    src: local('☺'), url('../../fonts/PlayfairDisplay-Medium.woff') format('woff'), url('../../fonts/PlayfairDisplay-Medium.ttf') format('truetype'), url('../../fonts/PlayfairDisplay-Medium.svg') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+.start {
+    max-width: 320px;
+    margin: 0 auto;
+    padding-top: 25%;
+}
+.content {
+    text-align: center;
+    font-size: 70px;
+    font-family: PlayfairDisplay serif;
+    border-top: 4px solid #000;
+    border-bottom: 4px solid #000;
+    text-transform: capitalize;
+}
