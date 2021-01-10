@@ -7,15 +7,12 @@
         max-width: calc (100vw - 240px);
     }           
 }
-@media (min-width: 1200px) {
-    .projectsPage {
-        padding-top: 80px;
-    }           
-}
+
 
 .title {
     text-transform: uppercase;
     font-family: PlayfairDisplay, serif;
+    font-weight: normal;
     font-size: 40px;
     text-align: center;
     font-weight: normal;
@@ -28,7 +25,6 @@
 @media (min-width: 1024px) {
     .title {
         margin-bottom: 40px;
-        font-size: 50px;
     }
 }
 @media (min-width: 1200px) {
