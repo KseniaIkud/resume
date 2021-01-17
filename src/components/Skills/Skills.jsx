@@ -14,8 +14,6 @@ const Skills = (props) => {
                         <ul className={classes.clarification}>
                             <li className={classes.package}>Redux</li>
                             <li className={classes.package}>React-Redux</li>
-                            <li className={classes.package}>React-final-form</li>
-                            <li className={classes.package}>Hooks</li>
                         </ul>
                     </li>
                     <li className={classes.technology}> Javascript
