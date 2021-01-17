@@ -32,7 +32,7 @@ const SideBar = (props) => {
             </div>
             <div className={classes.download}>
                 <div className={classes.downloadButton}>
-                    <a className={classes.downloadLink} href="https://yadi.sk/i/hIopKPz12DBK7A">
+                    <a className={classes.downloadLink} href="https://yadi.sk/i/6eS9ACEWCAtnsA">
                         {props.language === 'russian' && 'Скачать CV'} 
                         {props.language === 'english' && 'Download CV'}
                     </a>
