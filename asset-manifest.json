@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/resume/static/css/main.68fc3125.chunk.css",
-    "main.js": "/resume/static/js/main.bba881ac.chunk.js",
-    "main.js.map": "/resume/static/js/main.bba881ac.chunk.js.map",
+    "main.css": "/resume/static/css/main.828355e8.chunk.css",
+    "main.js": "/resume/static/js/main.ccc86492.chunk.js",
+    "main.js.map": "/resume/static/js/main.ccc86492.chunk.js.map",
     "runtime-main.js": "/resume/static/js/runtime-main.b81885cc.js",
     "runtime-main.js.map": "/resume/static/js/runtime-main.b81885cc.js.map",
     "static/js/2.c819d8ef.chunk.js": "/resume/static/js/2.c819d8ef.chunk.js",
@@ -10,9 +10,9 @@
     "static/js/3.ec8e74a8.chunk.js": "/resume/static/js/3.ec8e74a8.chunk.js",
     "static/js/3.ec8e74a8.chunk.js.map": "/resume/static/js/3.ec8e74a8.chunk.js.map",
     "index.html": "/resume/index.html",
-    "static/css/main.68fc3125.chunk.css.map": "/resume/static/css/main.68fc3125.chunk.css.map",
+    "static/css/main.828355e8.chunk.css.map": "/resume/static/css/main.828355e8.chunk.css.map",
     "static/js/2.c819d8ef.chunk.js.LICENSE.txt": "/resume/static/js/2.c819d8ef.chunk.js.LICENSE.txt",
-    "static/js/main.bba881ac.chunk.js.LICENSE.txt": "/resume/static/js/main.bba881ac.chunk.js.LICENSE.txt",
+    "static/js/main.ccc86492.chunk.js.LICENSE.txt": "/resume/static/js/main.ccc86492.chunk.js.LICENSE.txt",
     "static/media/SideBar.module.css": "/resume/static/media/whatsapp.fe1c2613.png",
     "static/media/Start.module.css": "/resume/static/media/PlayfairDisplay-Medium.f5999e5c.ttf",
     "static/media/CommonProject.module.css": "/resume/static/media/arrow.e2ecb0b1.png",
@@ -31,7 +31,7 @@
   "entrypoints": [
     "static/js/runtime-main.b81885cc.js",
     "static/js/2.c819d8ef.chunk.js",
-    "static/css/main.68fc3125.chunk.css",
-    "static/js/main.bba881ac.chunk.js"
+    "static/css/main.828355e8.chunk.css",
+    "static/js/main.ccc86492.chunk.js"
   ]
 }
