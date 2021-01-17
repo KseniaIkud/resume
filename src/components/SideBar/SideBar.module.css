@@ -94,11 +94,7 @@
     right: 5px;
 }
 .downloadButton:hover {
-    width: 82%;
-    height: 54px;
-}
-.downloadButton:hover .downloadLink {
-    padding-top: 16px;
+    width: 89%;
 }
 .downloadLink {
     text-decoration: none;
