@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import './App.css';
-import {Route, BrowserRouter} from "react-router-dom";
+import {Route, HashRouter} from "react-router-dom";
 import SideBar from "./components/SideBar/SideBar";
 import Home from "./components/Home/Home";
 import Skills from "./components/Skills/Skills";
@@ -11,7 +11,7 @@ import Start from "./components/Start/Start"
 const App = () => {
     const [language, toggleLanguage] = useState('english')
     return (
-        <BrowserRouter>
+        <HashRouter>
             <div className='app'>
                 <div className={'menuBurger'}>
                     <BurgerMenu language={language} toggleLanguage={toggleLanguage} />
@@ -37,7 +37,7 @@ const App = () => {
                     </Route>
                 </div>
             </div>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 
